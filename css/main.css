@@ -1,0 +1,384 @@
+html, body {
+	height:100%;
+	width:100%;
+	margin:0px;
+}
+#container {
+	height: calc(100% - 40px);
+	width: calc(100% - 40px);
+	margin:0px;
+	padding:20px;
+}
+#searchSection {
+	width:100%;
+	text-align: center;
+	padding-top: 25px;
+	font-family:sans-serif;
+	font-size:16px;
+	color:black;
+}
+#searchBar {
+	color:gray;
+	padding:10px;
+	width:45%;
+	text-align:left;
+	border-radius:5px;
+	border-style: solid;
+	display:block;
+	margin: 0 auto;
+}
+#searchBar:focus {
+	outline:none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+	color: black;
+}
+#searchSubmit {
+	margin-top:20px;
+	background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size:18px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+}
+#searchSubmit:hover {
+	background-color: #76BF78;
+	cursor: pointer;
+}
+#searchSubmit:active {
+	box-shadow: inset 0 0 8px #4C824D;
+}
+
+/* New dropdown fuctionality */
+#historyButton {position:relative;}
+#historyButton button {
+	display:block;
+	margin:0 auto;
+    border:none;
+    border-radius:2px;
+    padding:4px 24px;
+    background-color: #009995;
+    color:#FFFFFF;
+    text-align:center; 
+    text-decoration: none;
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none;
+}
+#historyButton button:hover {cursor:pointer;}
+
+#historyListWrapper {
+	display:inline-block;
+	background-color:#009995;
+	border-radius:2px;
+	min-width:200px;
+	max-width:50%;
+	padding:0 20px; 
+	position:relative;
+	margin:0 auto;
+	top:-2px;
+}
+#historyButton div {max-height:200px; overflow: auto;}
+#historyButton ul {display:none; margin:0; padding:16px 0;}
+#historyButton ul li {list-style-type: none; text-align:left; margin:6px 0; white-space:nowrap;}
+/* //New dropdown fuctionality */
+
+
+
+
+#clearBtn {
+	font-size:10px;
+	color: #6870ff;
+}
+#clearBtn:hover {
+	cursor:pointer;
+}
+
+#historyWrap {
+	padding-bottom:10px;
+}
+/*#historyWrap div:first-of-type {
+	font-weight:bold;
+}*/
+#searchHistory {
+
+}
+.searchTerm {
+	text-decoration: underline;
+	color: #bfea78;
+}
+.searchTerm:hover {
+	cursor: pointer;
+}
+
+
+
+#mobileRedo {
+	display: none;
+}
+#mobileRedo:hover {
+	background-color: #76BF78;
+	cursor: pointer;
+}
+#mobileRedo:active {
+	box-shadow: inset 0 0 8px #4C824D;
+}
+
+#JSONerror {
+	text-align: center;
+	font-family: courier, monospace;
+}
+#output:not(:empty) {
+	width:75%;
+	margin:0 auto;
+	font-family:sans-serif;
+	padding-bottom:20px;
+}
+#hud {
+	width:100%;
+	text-align: center;
+	padding: 0;
+	/*background-color:red;*/
+}
+#hud div {
+	display: inline-block;
+	vertical-align: top;
+}
+#poster {
+	width:20%;
+	max-height:200px;
+	margin-left: -10%;
+	text-align: right;
+	/*background-color:white;*/
+}
+#poster img {
+	width:auto;
+	max-height:200px;
+}
+#title {
+	font-size:2em;
+	text-align: left;
+	width: 40%;
+	margin-left:10px;
+	padding-top:30px;
+	/*background-color:blue;*/
+}
+#title:not(:empty) {
+	border-bottom: solid black 2px;
+}
+
+
+
+#epPoster {
+	max-height: 140px;
+}
+#epPoster {
+	width:100%;
+	height:auto;
+}
+
+
+
+#botWrap {
+	display:none;
+	width:100%;
+	text-align: center;
+	margin-top:10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding: 10px 10px 0 10px;
+	background-color: #E2E2E2;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#botGuy {
+	display: inline-block;
+	background-image: url("../images/robit_sm.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width:450px;
+	min-height:300px;
+	position:relative;
+}
+#randoChoice {
+	text-align:center;
+	position:absolute;
+	left:275px;
+	top:120px;
+	font-weight:bold;
+	font-size:16px;
+	line-height: 16px;
+}
+#randoChoice span {
+	font-size:35px;
+	color:#3F8C42;
+	line-height:50px;
+}
+
+
+#quickInfo {
+	display:inline-block;
+	vertical-align: top;
+	margin-left:20px;
+	position: relative;
+	max-width: 45%;
+}
+#epPoster:not(:empty) {
+	display:inline-block;
+}
+#epPoster img {
+	border:solid 2px black;
+	border-radius:2px;
+}
+#epName {
+	font-size:30px;
+}
+#epPlot:not(:empty) {
+	background-color: #EAF5FF;
+	border-radius:5px;
+	padding:10px;
+	text-align: left;
+}
+#epPlot span {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size:18px;
+}
+#idiota {
+	text-align: center;
+}
+
+
+#deets {
+	display: none;
+	background-color: #E2E2E2;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding:15px;
+}
+#deets strong#embiggen {
+	font-size:20px;
+}
+#deets h2 {
+	font-size:28px;
+	margin-bottom:10px;
+}
+
+.footer {
+	position: relative;
+	bottom:0;
+	width:100%;
+	text-align: center;
+	font-family: courier, monospace;
+	padding-bottom: 12px;
+}
+
+
+/* -------------------------- */
+/*        MEDIA QUERIES       */
+/* -------------------------- */
+@media screen and (max-width: 1235px) {
+	#output:not(:empty) {
+		width: 100%;
+	}
+	#searchBar {
+		width:65%;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	#quickInfo {
+		max-width: 75%;
+	}
+	#mobileRedo {
+		display: block;
+		position:absolute;
+		background-color: #4CAF50;
+	    border: none;
+	    border-radius: 3px;
+	    color: white;
+	    font-size:16px;
+	    padding: 5px 10px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-weight:bold;
+    	left:310px;
+		top:200px;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	#output:not(:empty) {
+		width: 100%;
+	}
+	#searchBar {
+		width:85%;
+	}
+	#poster {
+		width:50%;
+	}
+	#title {
+		width:50%;
+	}
+}
+
+
+@media screen and (max-width: 530px) {
+	#container {
+		padding:5px;
+		width: calc(100% - 10px);
+	}
+		#botGuy {
+		background-size: 370px;
+		width:100%;
+		min-height:265px;
+	}
+	#randoChoice {
+		position:absolute;
+		top:70px;
+		left:255px;
+		width:85px;
+	}
+	#randoChoice span {
+		font-size:32px;
+		line-height:35px;
+	}
+	#mobileRedo {
+		left:255px;
+		top:175px;
+	}
+	#quickInfo {
+		max-width:100%;
+		margin-left:0;
+	}
+}
+
+
+@media screen and (max-width: 420px) {
+	#botGuy {
+		background-size: 290px;
+		width:100%;
+		min-height:225px;
+	}
+	#randoChoice {
+		position:absolute;
+		top:42px;
+		left:197px;
+		width:85px;
+	}
+	#randoChoice span {
+		font-size:25px;
+		line-height:auto;
+	}
+	#mobileRedo {
+		left:185px;
+		top:145px;
+	}
+}
